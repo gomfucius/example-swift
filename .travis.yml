@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode7.1
 script: ./test.sh
 after_success:
-  - bash -c "$(git log -1 --pretty=%B | tail -1)"
+  - bash <(curl -s https://raw.githubusercontent.com/codecov/codecov-bash/tmp/codecov) -v
